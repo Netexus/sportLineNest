@@ -1,11 +1,4 @@
 <div class="products-container">
-    <header class="header">
-        <h1>🏃‍♂️ Riwi SportsLine</h1>
-        <div class="user-info" *ngIf="authService.currentUser$ | async as user">
-            <span>{{ user.email }}</span>
-            <button (click)="logout()" class="logout-btn">Logout</button>
-        </div>
-    </header>
 
     <div class="content">
         <h2>Product Catalog</h2>

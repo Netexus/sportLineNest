@@ -3,6 +3,9 @@ import { User } from '../users/entities/user.entity';
 import { Product } from '../products/entities/product.entity';
 import { Client } from '../clients/entities/client.entity';
 import { Order } from '../orders/entities/order.entity';
+import { Role } from '../roles/entities/role.entity';
+import { Permission } from '../permissions/entities/permission.entity';
+import { ApiKey } from '../api-keys/entities/api-key.entity';
 import { config } from 'dotenv';
 
 config();
@@ -14,7 +17,7 @@ const dataSource = new DataSource({
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    entities: [User, Product, Client, Order],
+    entities: [User, Product, Client, Order, Role, Permission, ApiKey],
     synchronize: false,
 });
 
